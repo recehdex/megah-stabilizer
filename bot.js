@@ -7,18 +7,20 @@ const CONFIG = {
     MEGAH: "0xc55d416476CFC6e879948eD5a5F4461c43Af45Aa".toLowerCase(),
     factories: {
         recehdex: "0x8E9556415124b6C726D5C3610d25c24Be8AC2304",
-        pancakeswap: "0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73"
+        pancakeswap: "0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73",
+        uniswap: "0x8909Dc15e40173Ff4699343b6eB8132c65e18eC6"
     },
     routers: {
         recehdex: "0xA131F04149CFA29b3f05d361EA807e737C9b1D95",
-        pancakeswap: "0x10ED43C718714eb63d5aA57B78B54704E256024E"
+        pancakeswap: "0x10ED43C718714eb63d5aA57B78B54704E256024E",
+        uniswap: "0x4752ba5DBc23f44D87826276BF6Fd6b1C372aD24"
     },
     slippageBps: 9991,
     gasLimit: 170000,
-    LOWER_BOUND: 0.999,
+    LOWER_BOUND: 0.996,
     TARGET_SELL: 0.998,
-    UPPER_BOUND: 1.07,
-    TARGET_BUY: 1.03,
+    UPPER_BOUND: 1.06,
+    TARGET_BUY: 1.04,
     maxRetries: 3,
     retryDelay: 1000,
     rpcTimeout: 5000,
