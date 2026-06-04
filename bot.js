@@ -133,7 +133,7 @@ async function getCurrentGasPrice() {
 function calculateSellMegahAmount(reserveMEGAH, reserveWBNB, targetPrice) {
   const R = parseFloat(ethers.utils.formatEther(reserveMEGAH));
   const U = parseFloat(ethers.utils.formatEther(reserveWBNB));
-  const currentPrice = M / W;
+  const currentPrice = R / U;
   if (currentPrice >= targetPrice) return ethers.BigNumber.from(0);
   const sqrtRatio = Math.sqrt(targetPrice / currentPrice);
   const x = R * (sqrtRatio - 1);
@@ -143,7 +143,7 @@ function calculateSellMegahAmount(reserveMEGAH, reserveWBNB, targetPrice) {
 function calculateBuyMegahAmount(reserveMEGAH, reserveWBNB, targetPrice) {
   const R = parseFloat(ethers.utils.formatEther(reserveMEGAH));
   const U = parseFloat(ethers.utils.formatEther(reserveWBNB));
-  const currentPrice = M / W;
+  const currentPrice = R / U;
   if (currentPrice <= targetPrice) return ethers.BigNumber.from(0);
   const sqrtRatio = Math.sqrt(currentPrice / targetPrice);
   const y = U * (sqrtRatio - 1);
